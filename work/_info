@@ -8,3 +8,108 @@ z2
 !i10f 100
 cModel Technology
 dC:/intelFPGA/18.1
+vadder
+Z0 !s110 1751325220
+!i10b 1
+!s100 H_K:kWY3<Q587NG1LlT9`0
+I7J;OmC;=G003>`FoFA5lb1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/uni/sec/IEEE/digital/codes/finalProject
+w1751317316
+8E:/uni/sec/IEEE/digital/codes/finalProject/adder.v
+FE:/uni/sec/IEEE/digital/codes/finalProject/adder.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1751325220.000000
+!s107 E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vmux
+!s110 1751317829
+!i10b 1
+!s100 J?af^o`^6^0ZKFW[N?lgY0
+IOn7E>N6mCbmeN3L2;@n=T0
+R1
+R2
+w1751317766
+Z7 8E:/uni/sec/IEEE/digital/codes/finalProject/mux.v
+Z8 FE:/uni/sec/IEEE/digital/codes/finalProject/mux.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1751317829.000000
+Z9 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/mux.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/mux.v|
+!i113 1
+R5
+R6
+vmux2to1
+R0
+!i10b 1
+!s100 <mME8;X76F?ab;fM?7]=M2
+IFHAn5P3g0PEORBD5FL@dL1
+R1
+R2
+Z11 w1751318387
+R7
+R8
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R9
+R10
+!i113 1
+R5
+R6
+vmux4to1
+R0
+!i10b 1
+!s100 a_Y4a;HmehI<L_2Ba20El2
+IHB=EiJGl1Q^XcJXhR5c`m1
+R1
+R2
+R11
+R7
+R8
+L0 13
+R3
+r1
+!s85 0
+31
+R4
+R9
+R10
+!i113 1
+R5
+R6
+vpc
+R0
+!i10b 1
+!s100 9BZh@DQ1OiiQOIO^M8Y^@1
+I6gDm^fe=_5L;F_YB?@M6c3
+R1
+R2
+w1751325135
+8E:/uni/sec/IEEE/digital/codes/finalProject/pc.v
+FE:/uni/sec/IEEE/digital/codes/finalProject/pc.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/uni/sec/IEEE/digital/codes/finalProject/pc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/pc.v|
+!i113 1
+R5
+R6
