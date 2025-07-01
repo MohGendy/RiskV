@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA/18.1
 vadder
-Z0 !s110 1751328006
+Z0 !s110 1751329476
 !i10b 1
 !s100 H_K:kWY3<Q587NG1LlT9`0
 I7J;OmC;=G003>`FoFA5lb1
@@ -23,20 +23,20 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1751328006.000000
+Z4 !s108 1751329476.000000
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
 !i113 1
 Z5 o-work work
 Z6 tCvgOpt 0
 valu
-R0
+!s110 1751329477
 !i10b 1
-!s100 L;Fkh8kdQJciXi^0Un?8l2
-I2=XgZmg6HU6_jD[bFC<VT3
+!s100 2ZN`Y=:d]K7IKbi3]bFoK2
+Ic1_<?f@lnmmX9MBcU@5MC3
 R1
 R2
-w1751327991
+w1751329472
 8E:/uni/sec/IEEE/digital/codes/finalProject/alu.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/alu.v
 L0 1

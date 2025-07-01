@@ -8,6 +8,7 @@ module alu (
 );
 
 always @(*) begin
+    aluResult = 32'b0;
     case(aluControl)
         3'b000: aluResult = srcA + srcB; // ADD
         3'b001: aluResult = srcA << srcB; // SHL
