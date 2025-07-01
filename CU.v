@@ -2,7 +2,7 @@ module mainDecoder (
     input wire [6:0] opcode,
     output reg [1:0] ALUOp,
     output reg RegWrite,
-    output reg ImmSrc,
+    output reg [1:0] ImmSrc,
     output reg ALUSrc,
     output reg MemWrite,
     output reg ResultSrc,
@@ -28,7 +28,7 @@ module mainDecoder (
                 ALUOp = 2'b00; 
             end 
             7'b010_0011:begin
-                RegWrite = 1; 
+                RegWrite = 0; 
                 ImmSrc = 2'b01; 
                 ALUSrc = 1; 
                 MemWrite = 1;  
@@ -107,7 +107,6 @@ module ALUDecoder (
 
         endcase
     end
-    
 endmodule
 
 module ALUDecoder2 (
@@ -134,6 +133,45 @@ module ALUDecoder2 (
             default: ALUControl = 3'b000; // Default case
 
         endcase
-    end
-    
+    end   
+endmodule
+
+module CU (
+    input wire [6:0] opcode,
+    input wire [2:0] funct3,
+    input wire funct7,
+    input wire zero,
+    output wire PCSrc,
+    output wire ResultSrc,
+    output wire MemWrite,
+    output wire [2:0] ALUControl,
+    output wire ALUSrc,
+    output wire [1:0] ImmSrc,
+    output wire RegWrite
+);
+
+    wire Branch;
+    wire [1:0] ALUOp;
+
+    mainDecoder md (
+        .opcode(opcode),
+        .ALUOp(ALUOp),
+        .RegWrite(RegWrite),
+        .ImmSrc(ImmSrc),
+        .ALUSrc(ALUSrc),
+        .MemWrite(MemWrite),
+        .ResultSrc(ResultSrc),
+        .Branch(Branch)
+    );
+
+    ALUDecoder aluDec (
+        .ALUOp(ALUOp),
+        .funct3(funct3),
+        .funct7(funct7),
+        .OP5(opcode[5]),
+        .ALUControl(ALUControl)
+    );
+
+    assign PCSrc = Branch & zero; // PCSrc is high if Branch is taken and zero flag is set
+
 endmodule
