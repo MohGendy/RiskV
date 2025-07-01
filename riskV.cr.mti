@@ -12,12 +12,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	adder
 
+} {} {}} E:/uni/sec/IEEE/digital/codes/finalProject/dataMem.v {1 {vlog -work work -stats=none E:/uni/sec/IEEE/digital/codes/finalProject/dataMem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module dataMem
+
+Top level modules:
+	dataMem
+
 } {} {}} E:/uni/sec/IEEE/digital/codes/finalProject/instMem.v {1 {vlog -work work -stats=none E:/uni/sec/IEEE/digital/codes/finalProject/instMem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module InstrMem
 
 Top level modules:
 	InstrMem
+
+} {} {}} E:/uni/sec/IEEE/digital/codes/finalProject/regFile.v {1 {vlog -work work -stats=none E:/uni/sec/IEEE/digital/codes/finalProject/regFile.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module regFile
+
+Top level modules:
+	regFile
 
 } {} {}} E:/uni/sec/IEEE/digital/codes/finalProject/alu.v {1 {vlog -work work -stats=none E:/uni/sec/IEEE/digital/codes/finalProject/alu.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
