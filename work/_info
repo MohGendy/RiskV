@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA/18.1
 vadder
-Z0 !s110 1751374359
+Z0 !s110 1751375316
 !i10b 1
 !s100 H_K:kWY3<Q587NG1LlT9`0
 I7J;OmC;=G003>`FoFA5lb1
@@ -23,14 +23,14 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1751374359.000000
+Z4 !s108 1751375316.000000
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
 !i113 1
 Z5 o-work work
 Z6 tCvgOpt 0
 valu
-Z7 !s110 1751374360
+Z7 !s110 1751375317
 !i10b 1
 !s100 2ZN`Y=:d]K7IKbi3]bFoK2
 Ic1_<?f@lnmmX9MBcU@5MC3
@@ -65,12 +65,34 @@ R3
 r1
 !s85 0
 31
-!s108 1751374360.000000
+Z8 !s108 1751375317.000000
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/extend.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/extend.v|
 !i113 1
 R5
 R6
+vInstrMem
+R7
+!i10b 1
+!s100 TRWjKZ>;R[fS`_XZmk>?h0
+I>Tj8NmK[b<LjR`c1m`aZ40
+R1
+R2
+w1751375312
+8E:/uni/sec/IEEE/digital/codes/finalProject/instMem.v
+FE:/uni/sec/IEEE/digital/codes/finalProject/instMem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 E:/uni/sec/IEEE/digital/codes/finalProject/instMem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/instMem.v|
+!i113 1
+R5
+R6
+n@instr@mem
 vmux
 !s110 1751317829
 !i10b 1
@@ -79,16 +101,16 @@ IOn7E>N6mCbmeN3L2;@n=T0
 R1
 R2
 w1751317766
-Z8 8E:/uni/sec/IEEE/digital/codes/finalProject/mux.v
-Z9 FE:/uni/sec/IEEE/digital/codes/finalProject/mux.v
+Z9 8E:/uni/sec/IEEE/digital/codes/finalProject/mux.v
+Z10 FE:/uni/sec/IEEE/digital/codes/finalProject/mux.v
 L0 1
 R3
 r1
 !s85 0
 31
 !s108 1751317829.000000
-Z10 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/mux.v|
-Z11 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/mux.v|
+Z11 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/mux.v|
+Z12 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/mux.v|
 !i113 1
 R5
 R6
@@ -99,17 +121,17 @@ R0
 IFHAn5P3g0PEORBD5FL@dL1
 R1
 R2
-Z12 w1751318387
-R8
+Z13 w1751318387
 R9
+R10
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-R10
 R11
+R12
 !i113 1
 R5
 R6
@@ -120,17 +142,17 @@ R0
 IHB=EiJGl1Q^XcJXhR5c`m1
 R1
 R2
-R12
-R8
+R13
 R9
+R10
 L0 13
 R3
 r1
 !s85 0
 31
 R4
-R10
 R11
+R12
 !i113 1
 R5
 R6
