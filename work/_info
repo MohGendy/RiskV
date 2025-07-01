@@ -9,171 +9,193 @@ z2
 cModel Technology
 dC:/intelFPGA/18.1
 vadder
-Z0 !s110 1751375316
+!s110 1751375993
 !i10b 1
 !s100 H_K:kWY3<Q587NG1LlT9`0
 I7J;OmC;=G003>`FoFA5lb1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dE:/uni/sec/IEEE/digital/codes/finalProject
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dE:/uni/sec/IEEE/digital/codes/finalProject
 w1751317316
 8E:/uni/sec/IEEE/digital/codes/finalProject/adder.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/adder.v
 L0 1
-Z3 OV;L;10.5b;63
+Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1751375316.000000
+!s108 1751375993.000000
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z3 o-work work
+Z4 tCvgOpt 0
 valu
-Z7 !s110 1751375317
+Z5 !s110 1751375994
 !i10b 1
 !s100 2ZN`Y=:d]K7IKbi3]bFoK2
 Ic1_<?f@lnmmX9MBcU@5MC3
+R0
 R1
-R2
 w1751329472
 8E:/uni/sec/IEEE/digital/codes/finalProject/alu.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/alu.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R4
+Z6 !s108 1751375994.000000
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/alu.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/alu.v|
 !i113 1
-R5
-R6
+R3
+R4
 vextend
-R7
+R5
 !i10b 1
 !s100 MJfgTLfD7HlK=P`n7Gb>F0
 I[G6Bl_koba9OmBBV2kF8n0
+R0
 R1
-R2
 w1751374355
 8E:/uni/sec/IEEE/digital/codes/finalProject/extend.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/extend.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-Z8 !s108 1751375317.000000
+R6
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/extend.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/extend.v|
 !i113 1
-R5
-R6
+R3
+R4
 vInstrMem
-R7
+Z7 !s110 1751375995
 !i10b 1
 !s100 TRWjKZ>;R[fS`_XZmk>?h0
 I>Tj8NmK[b<LjR`c1m`aZ40
+R0
 R1
-R2
 w1751375312
 8E:/uni/sec/IEEE/digital/codes/finalProject/instMem.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/instMem.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R8
+R6
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/instMem.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/instMem.v|
 !i113 1
-R5
-R6
+R3
+R4
 n@instr@mem
 vmux
 !s110 1751317829
 !i10b 1
 !s100 J?af^o`^6^0ZKFW[N?lgY0
 IOn7E>N6mCbmeN3L2;@n=T0
+R0
 R1
-R2
 w1751317766
-Z9 8E:/uni/sec/IEEE/digital/codes/finalProject/mux.v
-Z10 FE:/uni/sec/IEEE/digital/codes/finalProject/mux.v
+Z8 8E:/uni/sec/IEEE/digital/codes/finalProject/mux.v
+Z9 FE:/uni/sec/IEEE/digital/codes/finalProject/mux.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
 !s108 1751317829.000000
-Z11 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/mux.v|
-Z12 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/mux.v|
+Z10 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/mux.v|
+Z11 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/mux.v|
 !i113 1
-R5
-R6
+R3
+R4
 vmux2to1
-R0
+R5
 !i10b 1
 !s100 <mME8;X76F?ab;fM?7]=M2
 IFHAn5P3g0PEORBD5FL@dL1
+R0
 R1
-R2
-Z13 w1751318387
+Z12 w1751318387
+R8
 R9
-R10
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R4
-R11
-R12
-!i113 1
-R5
 R6
+R10
+R11
+!i113 1
+R3
+R4
 vmux4to1
-R0
+R5
 !i10b 1
 !s100 a_Y4a;HmehI<L_2Ba20El2
 IHB=EiJGl1Q^XcJXhR5c`m1
+R0
 R1
-R2
-R13
+R12
+R8
 R9
-R10
 L0 13
-R3
+R2
 r1
 !s85 0
 31
-R4
-R11
-R12
-!i113 1
-R5
 R6
+R10
+R11
+!i113 1
+R3
+R4
 vpc
-R0
+R5
 !i10b 1
 !s100 9BZh@DQ1OiiQOIO^M8Y^@1
 I6gDm^fe=_5L;F_YB?@M6c3
+R0
 R1
-R2
 w1751325135
 8E:/uni/sec/IEEE/digital/codes/finalProject/pc.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/pc.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R4
+R6
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/pc.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/pc.v|
 !i113 1
-R5
-R6
+R3
+R4
+vregFile
+R7
+!i10b 1
+!s100 K5dmf[@7zKaffI9d:WNfo0
+Ih83f[^>jBeg16LFNaFU582
+R0
+R1
+w1751375948
+8E:/uni/sec/IEEE/digital/codes/finalProject/regFile.v
+FE:/uni/sec/IEEE/digital/codes/finalProject/regFile.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1751375995.000000
+!s107 E:/uni/sec/IEEE/digital/codes/finalProject/regFile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/regFile.v|
+!i113 1
+R3
+R4
+nreg@file
