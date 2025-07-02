@@ -11,12 +11,12 @@ module mux2to1 (
 endmodule
 
 module mux4to1 (
-    input wire [31:0] A,
-    input wire [31:0] B,
-    input wire [31:0] C,
-    input wire [31:0] D,
+    input wire A,
+    input wire B,
+    input wire C,
+    input wire D,
     input wire [1:0] sel,
-    output wire [31:0] out
+    output wire out
 );
 
     assign out = (sel == 2'b00) ? A :

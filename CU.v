@@ -141,6 +141,7 @@ module CU (
     input wire [2:0] funct3,
     input wire funct7,
     input wire zero,
+    input wire sign,
     output wire PCSrc,
     output wire ResultSrc,
     output wire MemWrite,
@@ -152,6 +153,8 @@ module CU (
 
     wire Branch;
     wire [1:0] ALUOp;
+    wire [1:0] sel;
+    wire out;
 
     mainDecoder md (
         .opcode(opcode),
@@ -172,6 +175,18 @@ module CU (
         .ALUControl(ALUControl)
     );
 
-    assign PCSrc = Branch & zero; // PCSrc is high if Branch is taken and zero flag is set
+    assign sel = {funct3[2], funct3[0]};
+
+    mux4to1 mux (
+        .A(zero),
+        .B(~zero),
+        .C(sign),
+        .D(0),
+        .sel(sel),
+        .out(out)
+
+    );
+
+    assign PCSrc = Branch & out; // PCSrc is high if Branch is taken and zero flag is set
 
 endmodule

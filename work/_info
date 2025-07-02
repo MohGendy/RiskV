@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA/18.1
 vadder
-Z0 !s110 1751400305
+Z0 !s110 1751477419
 !i10b 1
 !s100 H_K:kWY3<Q587NG1LlT9`0
 I7J;OmC;=G003>`FoFA5lb1
@@ -23,14 +23,14 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1751400305.000000
+Z4 !s108 1751477419.000000
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
 !i113 1
 Z5 o-work work
 Z6 tCvgOpt 0
 valu
-Z7 !s110 1751400306
+Z7 !s110 1751477420
 !i10b 1
 !s100 2ZN`Y=:d]K7IKbi3]bFoK2
 Ic1_<?f@lnmmX9MBcU@5MC3
@@ -44,20 +44,20 @@ R3
 r1
 !s85 0
 31
-Z8 !s108 1751400306.000000
+Z8 !s108 1751477420.000000
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/alu.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/alu.v|
 !i113 1
 R5
 R6
 vALUDecoder
-Z9 !s110 1751400307
+Z9 !s110 1751477421
 !i10b 1
 !s100 fig_zW3U857VA`l5eL=]?1
 IEl0I@IMhaMLJA>Y0C8aeP1
 R1
 R2
-Z10 w1751400301
+Z10 w1751477409
 Z11 8E:/uni/sec/IEEE/digital/codes/finalProject/CU.v
 Z12 FE:/uni/sec/IEEE/digital/codes/finalProject/CU.v
 L0 78
@@ -65,7 +65,7 @@ R3
 r1
 !s85 0
 31
-Z13 !s108 1751400307.000000
+Z13 !s108 1751477421.000000
 Z14 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/CU.v|
 Z15 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/CU.v|
 !i113 1
@@ -97,8 +97,8 @@ n@a@l@u@decoder2
 vCU
 R9
 !i10b 1
-!s100 <IGEi3UmB`7O?KRFAc3H81
-I_7dAFNZO:MJ@QYCbLnVB=3
+!s100 K5dMZ^7fe=z9[ZGL36JTz1
+I`GW[7CKcLP^cSFRmgVW]C0
 R1
 R2
 R10
@@ -203,6 +203,28 @@ R15
 R5
 R6
 nmain@decoder
+vMC
+R9
+!i10b 1
+!s100 JJh1GGo_>_m:_3HGoXLHe0
+Il[J3_4GUf7`zH@OQ2@5@L3
+R1
+R2
+w1751442337
+8E:/uni/sec/IEEE/digital/codes/finalProject/MC.v
+FE:/uni/sec/IEEE/digital/codes/finalProject/MC.v
+L0 1
+R3
+r1
+!s85 0
+31
+R13
+!s107 E:/uni/sec/IEEE/digital/codes/finalProject/MC.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/MC.v|
+!i113 1
+R5
+R6
+n@m@c
 vmux
 !s110 1751317829
 !i10b 1
@@ -231,7 +253,7 @@ R0
 IFHAn5P3g0PEORBD5FL@dL1
 R1
 R2
-Z20 w1751318387
+Z20 w1751477240
 R16
 R17
 L0 1
@@ -248,8 +270,8 @@ R6
 vmux4to1
 R0
 !i10b 1
-!s100 a_Y4a;HmehI<L_2Ba20El2
-IHB=EiJGl1Q^XcJXhR5c`m1
+!s100 0KX^?`g9<iW3oUoD<D^;Y2
+IHT<fJbGcc2PzB6W]@ncE31
 R1
 R2
 R20
@@ -288,7 +310,7 @@ R4
 R5
 R6
 vregFile
-R7
+R9
 !i10b 1
 !s100 K5dmf[@7zKaffI9d:WNfo0
 Ih83f[^>jBeg16LFNaFU582
