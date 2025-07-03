@@ -184,7 +184,6 @@ module CU (
         .D(0),
         .sel(sel),
         .out(out)
-
     );
 
     assign PCSrc = Branch & out; // PCSrc is high if Branch is taken and zero flag is set
