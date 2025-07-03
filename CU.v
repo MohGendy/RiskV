@@ -6,70 +6,77 @@ module mainDecoder (
     output reg ALUSrc,
     output reg MemWrite,
     output reg ResultSrc,
-    output reg Branch
+    output reg Branch,
+    output reg load
 );
     always @(*) begin
-        RegWrite = 0;
-        ALUOp = 2'b00;
-        ImmSrc = 2'b00;
-        ALUSrc = 0;
-        MemWrite = 0;
-        ResultSrc = 0;
-        Branch = 0;
+        // RegWrite = 0;
+        // ALUOp = 2'b00;
+        // ImmSrc = 2'b00;
+        // ALUSrc = 0;
+        // MemWrite = 0;
+        // ResultSrc = 0;
+        // Branch = 0;
+        // load = 1;
         // Default values
-        case (opcode)
-            7'b000_0011:begin
-                RegWrite = 1; 
-                ImmSrc = 2'b00; 
-                ALUSrc = 1; 
-                MemWrite = 0; 
-                ResultSrc = 1; 
-                Branch = 0; 
-                ALUOp = 2'b00; 
-            end 
-            7'b010_0011:begin
-                RegWrite = 0; 
-                ImmSrc = 2'b01; 
-                ALUSrc = 1; 
-                MemWrite = 1;  
-                Branch = 0; 
-                ALUOp = 2'b00; 
-            end 
-            7'b011_0011:begin
-                RegWrite = 1; 
-                ALUSrc = 0; 
-                MemWrite = 0; 
-                ResultSrc = 0; 
-                Branch = 0; 
-                ALUOp = 2'b10; 
-            end 
-            7'b001_0011:begin
-                RegWrite = 1; 
-                ImmSrc = 2'b00; 
-                ALUSrc = 1; 
-                MemWrite = 0; 
-                ResultSrc = 0; 
-                Branch = 0; 
-                ALUOp = 2'b10; 
-            end
-            7'b110_0011:begin
-                RegWrite = 0; 
-                ImmSrc = 2'b10; 
-                ALUSrc = 0; 
-                MemWrite = 0;  
-                Branch = 1; 
-                ALUOp = 2'b01; 
-            end 
-            default:begin
-                RegWrite = 0;
-                ALUOp = 2'b00;
-                ImmSrc = 2'b00;
-                ALUSrc = 0;
-                MemWrite = 0;
-                ResultSrc = 0;
-                Branch = 0;
-            end  
-        endcase
+        if(|opcode)begin
+            load = 1; // If opcode is not zero, do not load
+            case (opcode)
+                7'b000_0011:begin
+                    RegWrite = 1; 
+                    ImmSrc = 2'b00; 
+                    ALUSrc = 1; 
+                    MemWrite = 0; 
+                    ResultSrc = 1; 
+                    Branch = 0; 
+                    ALUOp = 2'b00; 
+                end 
+                7'b010_0011:begin
+                    RegWrite = 0; 
+                    ImmSrc = 2'b01; 
+                    ALUSrc = 1; 
+                    MemWrite = 1;  
+                    Branch = 0; 
+                    ALUOp = 2'b00; 
+                end 
+                7'b011_0011:begin
+                    RegWrite = 1; 
+                    ALUSrc = 0; 
+                    MemWrite = 0; 
+                    ResultSrc = 0; 
+                    Branch = 0; 
+                    ALUOp = 2'b10; 
+                end 
+                7'b001_0011:begin
+                    RegWrite = 1; 
+                    ImmSrc = 2'b00; 
+                    ALUSrc = 1; 
+                    MemWrite = 0; 
+                    ResultSrc = 0; 
+                    Branch = 0; 
+                    ALUOp = 2'b10; 
+                end
+                7'b110_0011:begin
+                    RegWrite = 0; 
+                    ImmSrc = 2'b10; 
+                    ALUSrc = 0; 
+                    MemWrite = 0;  
+                    Branch = 1; 
+                    ALUOp = 2'b01; 
+                end 
+                default:begin
+                    RegWrite = 0;
+                    ALUOp = 2'b00;
+                    ImmSrc = 2'b00;
+                    ALUSrc = 0;
+                    MemWrite = 0;
+                    ResultSrc = 0;
+                    Branch = 0;
+                end  
+            endcase
+        end else begin
+            load = 0; // If opcode is zero, load is enabled
+        end
     end
 
     
@@ -148,7 +155,8 @@ module CU (
     output wire [2:0] ALUControl,
     output wire ALUSrc,
     output wire [1:0] ImmSrc,
-    output wire RegWrite
+    output wire RegWrite,
+    output wire load
 );
 
     wire Branch;
@@ -164,7 +172,8 @@ module CU (
         .ALUSrc(ALUSrc),
         .MemWrite(MemWrite),
         .ResultSrc(ResultSrc),
-        .Branch(Branch)
+        .Branch(Branch),
+        .load(load)
     );
 
     ALUDecoder aluDec (
@@ -181,7 +190,7 @@ module CU (
         .A(zero),
         .B(~zero),
         .C(sign),
-        .D(0),
+        .D(32'b0),
         .sel(sel),
         .out(out)
     );

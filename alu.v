@@ -8,7 +8,9 @@ module alu (
 );
 
 always @(*) begin
-    aluResult = 32'b0;
+    // zero = 1'b0;
+    // sign = 1'b0;
+    // aluResult = 32'b0;
     case(aluControl)
         3'b000: aluResult = srcA + srcB; // ADD
         3'b001: aluResult = srcA << srcB; // SHL
@@ -21,7 +23,7 @@ always @(*) begin
     endcase
 
     // Set zero flag
-    zero = (aluResult == 32'b0);
+    zero = ~|aluResult; // Zero if all bits are zero
     // Set sign flag
     sign = aluResult[31]; // Most significant bit indicates sign
     

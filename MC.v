@@ -4,6 +4,7 @@ module MC (
 );
 
     wire [31:0] PC;
+    wire load;
 
     wire [31:0] Instr;
 
@@ -35,12 +36,12 @@ module MC (
         .nextPc(PCNext),
         .clk(clk),
         .areset(areset),
-        .load(1),
+        .load(load),
         .pc(PC)
     );
 
     InstrMem instrMem (
-        .pc(pc),
+        .pc(PC),
         .Instr(Instr)
     );
 
@@ -56,7 +57,8 @@ module MC (
         .ALUControl(ALUControl),
         .ALUSrc(ALUSrc),
         .ImmSrc(ImmSrc),
-        .RegWrite(RegWrite)
+        .RegWrite(RegWrite),
+        .load(load)
     );
 
     regFile registerFile (
@@ -110,13 +112,13 @@ module MC (
     adder pcAdder (
         .A(PC),
         .B(32'b100),
-        .sum(PCplus4)
+        .SUM(PCplus4)
     );
 
     adder branchAdder (
         .A(PC),
         .B(ImmExt), // Shift immediate left by 2 for word addressing
-        .sum(PCTarget)
+        .SUM(PCTarget)
     );
 
     mux2to1 pcMux (
