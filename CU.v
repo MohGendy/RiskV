@@ -1,28 +1,37 @@
 module mainDecoder (
-    input wire [6:0] opcode,
-    output reg [1:0] ALUOp,
-    output reg RegWrite,
-    output reg [1:0] ImmSrc,
-    output reg ALUSrc,
-    output reg MemWrite,
-    output reg ResultSrc,
-    output reg Branch,
-    output reg load
+    input wire [6:0] opcode,    // opcode from instruction
+    output reg [1:0] ALUOp,    // ALU operation
+    output reg RegWrite,      // RegWrite Enable
+    output reg [1:0] ImmSrc, // Immediate Source Select
+    output reg ALUSrc,      // ALU Source Select
+    output reg MemWrite,   // Memory Write Enable
+    output reg ResultSrc, // Result Source Select
+    output reg Branch,   // Branch Signal
+    output reg load     // load PC
 );
+
+    parameter HLT   = 7'b000_0000,      // Halt instruction opcode
+              LD    = 7'b000_0011,     // Load instruction opcode
+              ST    = 7'b010_0011,    // Store instruction opcode
+              RType = 7'b011_0011,   // R-type instruction opcode
+              IType = 7'b001_0011,  // I-type instruction opcode
+              BType = 7'b110_0011; // B-type instruction opcode
+
     always @(*) begin
-        // RegWrite = 0;
-        // ALUOp = 2'b00;
-        // ImmSrc = 2'b00;
-        // ALUSrc = 0;
-        // MemWrite = 0;
-        // ResultSrc = 0;
-        // Branch = 0;
-        // load = 1;
         // Default values
+        RegWrite = 0;
+        ALUOp = 2'b00;
+        ImmSrc = 2'b00;
+        ALUSrc = 0;
+        MemWrite = 0;
+        ResultSrc = 0;
+        Branch = 0;
+        load = 1;
+
         if(|opcode)begin
-            load = 1; // If opcode is not zero, do not load
+            load = 1; // If opcode is not zero , load is enabled (not HLT instruction)
             case (opcode)
-                7'b000_0011:begin
+                LD:begin
                     RegWrite = 1; 
                     ImmSrc = 2'b00; 
                     ALUSrc = 1; 
@@ -31,7 +40,7 @@ module mainDecoder (
                     Branch = 0; 
                     ALUOp = 2'b00; 
                 end 
-                7'b010_0011:begin
+                ST:begin
                     RegWrite = 0; 
                     ImmSrc = 2'b01; 
                     ALUSrc = 1; 
@@ -39,7 +48,7 @@ module mainDecoder (
                     Branch = 0; 
                     ALUOp = 2'b00; 
                 end 
-                7'b011_0011:begin
+                RType:begin
                     RegWrite = 1; 
                     ALUSrc = 0; 
                     MemWrite = 0; 
@@ -47,7 +56,7 @@ module mainDecoder (
                     Branch = 0; 
                     ALUOp = 2'b10; 
                 end 
-                7'b001_0011:begin
+                IType:begin
                     RegWrite = 1; 
                     ImmSrc = 2'b00; 
                     ALUSrc = 1; 
@@ -56,7 +65,7 @@ module mainDecoder (
                     Branch = 0; 
                     ALUOp = 2'b10; 
                 end
-                7'b110_0011:begin
+                BType:begin
                     RegWrite = 0; 
                     ImmSrc = 2'b10; 
                     ALUSrc = 0; 
@@ -75,7 +84,7 @@ module mainDecoder (
                 end  
             endcase
         end else begin
-            load = 0; // If opcode is zero, load is enabled
+            load = 0; // If opcode is zero, load is disabled (HLT instruction)
         end
     end
 
@@ -83,11 +92,11 @@ module mainDecoder (
 endmodule
 
 module ALUDecoder (
-    input wire [1:0] ALUOp,
-    input wire [2:0] funct3,
-    input wire funct7,
-    input wire OP5,
-    output reg [2:0] ALUControl
+    input wire [1:0] ALUOp,         // ALU operation type
+    input wire [2:0] funct3,       // funct3 from instruction
+    input wire funct7,            // funct7 from instruction
+    input wire OP5,              // 5th bit of opcode
+    output reg [2:0] ALUControl // ALU control signals
 );
     always @(*) begin
         ALUControl = 3'b000; // Default value
@@ -110,18 +119,18 @@ module ALUDecoder (
             7'b10_110_xx:ALUControl = 3'b110; // OR
             7'b10_111_xx:ALUControl = 3'b111; // AND
 
-            default: ALUControl = 3'b000; // Default case
+            default: ALUControl = 3'b000;     // Default case
 
         endcase
     end
 endmodule
 
-module ALUDecoder2 (
-    input wire [1:0] ALUOp,
-    input wire [2:0] funct3,
-    input wire funct7,
-    input wire OP5,
-    output reg [2:0] ALUControl
+module ALUDecoder2 (    // Another version of ALUDecoder for same logic
+    input wire [1:0] ALUOp,         // ALU operation type
+    input wire [2:0] funct3,       // funct3 from instruction
+    input wire funct7,            // funct7 from instruction
+    input wire OP5,              // 5th bit of opcode
+    output reg [2:0] ALUControl // ALU control signals
 );
     always @(*) begin
         ALUControl = 3'b000; // Default value
@@ -133,8 +142,8 @@ module ALUDecoder2 (
             end
             
             2'b10:begin
-                if((funct3 == 3'b000) && (OP5&funct7)) ALUControl = 3'b010; //SUB
-                else ALUControl = funct3; // For other operations
+                if((funct3 == 3'b000) && (OP5 & funct7)) ALUControl = 3'b010; //SUB
+                else ALUControl = funct3; // For other operations (funct3)
             end
 
             default: ALUControl = 3'b000; // Default case
@@ -144,25 +153,25 @@ module ALUDecoder2 (
 endmodule
 
 module CU (
-    input wire [6:0] opcode,
-    input wire [2:0] funct3,
-    input wire funct7,
-    input wire zero,
-    input wire sign,
-    output wire PCSrc,
-    output wire ResultSrc,
-    output wire MemWrite,
-    output wire [2:0] ALUControl,
-    output wire ALUSrc,
-    output wire [1:0] ImmSrc,
-    output wire RegWrite,
-    output wire load
+    input wire [6:0] opcode,                // opcode from instruction
+    input wire [2:0] funct3,               // funct3 from instruction
+    input wire funct7,                    // funct7 from instruction
+    input wire zero,                     // zero flag from ALU
+    input wire sign,                    // sign flag from ALU
+    output wire PCSrc,                 // PCSrc Select
+    output wire ResultSrc,            // ResultSrc Select
+    output wire MemWrite,            // Memory Write Enable
+    output wire [2:0] ALUControl,   // ALU Control signals
+    output wire ALUSrc,            // ALU Srouce Select
+    output wire [1:0] ImmSrc,     // Immediate Source Select
+    output wire RegWrite,        // Register Write Enable
+    output wire load            // load PC
 );
 
-    wire Branch;
-    wire [1:0] ALUOp;
-    wire [1:0] sel;
-    wire out;
+    wire Branch;        // Branch is high if the instruction is a branch instruction
+    wire [1:0] ALUOp;   // ALUOp selects the ALU operation type
+    wire [1:0] sel;     // sel is used to select the output of the mux for PCSrc
+    wire out;           // out is the output of the mux for PCSrc
 
     mainDecoder md (
         .opcode(opcode),
@@ -184,7 +193,7 @@ module CU (
         .ALUControl(ALUControl)
     );
 
-    assign sel = {funct3[2], funct3[0]};
+    assign sel = {funct3[2], funct3[0]}; // sel is derived from funct3 bits 2 and 0
 
     mux4to1 mux (
         .A(zero),

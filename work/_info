@@ -9,13 +9,13 @@ z2
 cModel Technology
 dC:/intelFPGA/18.1
 vadder
-Z0 !s110 1751562495
+Z0 !s110 1751635058
 !i10b 1
-!s100 H_K:kWY3<Q587NG1LlT9`0
-I7J;OmC;=G003>`FoFA5lb1
+!s100 X5UXHS`0ZYb:oRb>=SomT3
+IgYO16HS`TYWLiPXlDE3f20
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dE:/uni/sec/IEEE/digital/codes/finalProject
-w1751317316
+w1751570063
 8E:/uni/sec/IEEE/digital/codes/finalProject/adder.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/adder.v
 L0 1
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1751562494.000000
+!s108 1751635057.000000
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/adder.v|
 !i113 1
@@ -32,11 +32,11 @@ Z5 tCvgOpt 0
 valu
 R0
 !i10b 1
-!s100 HOeO:?:CEkoKW`B<MiDfQ3
-IaK?1d7F>;M=j7O:?8]1Jc0
+!s100 D5jWk6oH8bM9jLH^P4Q6z1
+I86FejjH=P4gH6l:I<1BXn0
 R1
 R2
-w1751562482
+w1751570050
 8E:/uni/sec/IEEE/digital/codes/finalProject/alu.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/alu.v
 L0 1
@@ -44,28 +44,28 @@ R3
 r1
 !s85 0
 31
-Z6 !s108 1751562495.000000
+Z6 !s108 1751635058.000000
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/alu.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/alu.v|
 !i113 1
 R4
 R5
 vALUDecoder
-Z7 !s110 1751562496
+Z7 !s110 1751635059
 !i10b 1
-!s100 ElznK_Va;:[HVRl_l4gL02
-IV^a53zY4<d6WGQN=9YY8N3
+!s100 9]7bALNFj=]FQ3W@oAEQC3
+IN[b=oflZ_7>i;:zT;>AVf2
 R1
 R2
-Z8 w1751562174
+Z8 w1751634224
 Z9 8E:/uni/sec/IEEE/digital/codes/finalProject/CU.v
 Z10 FE:/uni/sec/IEEE/digital/codes/finalProject/CU.v
-L0 85
+L0 94
 R3
 r1
 !s85 0
 31
-Z11 !s108 1751562496.000000
+Z11 !s108 1751635059.000000
 Z12 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/CU.v|
 Z13 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/CU.v|
 !i113 1
@@ -75,14 +75,14 @@ n@a@l@u@decoder
 vALUDecoder2
 R7
 !i10b 1
-!s100 6kbRL3@Af1^oe?_5;=L3f0
-I_g8S4]CU9f3RfV[K1AUK92
+!s100 280kTb?W`RH`W85a^IC<]1
+IA@H;Uif:Ve30]CU5iL[[a3
 R1
 R2
 R8
 R9
 R10
-L0 119
+L0 128
 R3
 r1
 !s85 0
@@ -97,14 +97,14 @@ n@a@l@u@decoder2
 vCU
 R7
 !i10b 1
-!s100 `oLmCSl[1>K`ag2IaQJ<M2
-I<5P7K5YCCQAG<=PDE[25C2
+!s100 f;24GnG59f[OPf2D4V4FH2
+IoM;ES;jnkmIehIU4R<mmi3
 R1
 R2
 R8
 R9
 R10
-L0 146
+L0 155
 R3
 r1
 !s85 0
@@ -119,11 +119,11 @@ n@c@u
 vdataMem
 R7
 !i10b 1
-!s100 ?D6aDZZ^P3BRdB^XP@6[L1
-IaJQ7DL5i^MZREO7DBHaEc2
+!s100 WPH[;V3b[XH]VX@U[<gFo3
+IlJDG600;KT3UW[3nY;iiM0
 R1
 R2
-w1751376735
+w1751633503
 8E:/uni/sec/IEEE/digital/codes/finalProject/dataMem.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/dataMem.v
 L0 1
@@ -145,7 +145,7 @@ R7
 I[G6Bl_koba9OmBBV2kF8n0
 R1
 R2
-w1751374355
+w1751634269
 8E:/uni/sec/IEEE/digital/codes/finalProject/extend.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/extend.v
 L0 1
@@ -153,7 +153,7 @@ R3
 r1
 !s85 0
 31
-R6
+R11
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/extend.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/extend.v|
 !i113 1
@@ -166,7 +166,7 @@ R7
 I>Tj8NmK[b<LjR`c1m`aZ40
 R1
 R2
-w1751375312
+w1751634302
 8E:/uni/sec/IEEE/digital/codes/finalProject/instMem.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/instMem.v
 L0 1
@@ -184,8 +184,8 @@ n@instr@mem
 vmainDecoder
 R7
 !i10b 1
-!s100 h1aUkIWAJeMghFYnK`^z61
-IX`^BGTcm5G>0;>:NVf4^f2
+!s100 cze3M5Nh?^mGK9zann:DR2
+Iei=k_mij=[>aBOACXMe5f2
 R1
 R2
 R8
@@ -204,13 +204,13 @@ R4
 R5
 nmain@decoder
 vMC
-!s110 1751562497
+!s110 1751635060
 !i10b 1
 !s100 9NdjdPM[eaBhV1h[E`6PK0
 IQl5CRDUT3W3e3C7m@j0Km1
 R1
 R2
-w1751560784
+w1751635020
 8E:/uni/sec/IEEE/digital/codes/finalProject/MC.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/MC.v
 L0 1
@@ -218,7 +218,7 @@ R3
 r1
 !s85 0
 31
-!s108 1751562497.000000
+!s108 1751635060.000000
 !s107 E:/uni/sec/IEEE/digital/codes/finalProject/MC.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/uni/sec/IEEE/digital/codes/finalProject/MC.v|
 !i113 1
@@ -295,7 +295,7 @@ R0
 I6gDm^fe=_5L;F_YB?@M6c3
 R1
 R2
-w1751325135
+w1751634385
 8E:/uni/sec/IEEE/digital/codes/finalProject/pc.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/pc.v
 L0 1
@@ -316,7 +316,7 @@ R7
 Ih83f[^>jBeg16LFNaFU582
 R1
 R2
-w1751557735
+w1751634472
 8E:/uni/sec/IEEE/digital/codes/finalProject/regFile.v
 FE:/uni/sec/IEEE/digital/codes/finalProject/regFile.v
 L0 1
@@ -332,13 +332,13 @@ R4
 R5
 nreg@file
 vtop
-!s110 1751562501
+!s110 1751635624
 !i10b 1
-!s100 94;6TlkEoQ_<K7_nIXWmN0
-IMP19`JEMk9z31oGhY_ZWW2
+!s100 TW0?_F6Ih<j[@z[KlCoXQ0
+ID4@N?[DTll:I8SndzoegG1
 R1
 R2
-w1751559475
+w1751634552
 8top.v
 Ftop.v
 L0 1
@@ -346,7 +346,7 @@ R3
 r1
 !s85 0
 31
-!s108 1751562501.000000
+!s108 1751635624.000000
 !s107 top.v|
 !s90 -reportprogress|300|top.v|
 !i113 1

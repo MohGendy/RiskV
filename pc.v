@@ -1,9 +1,9 @@
 module pc (
-    input wire [31:0] nextPc,
-    input wire clk,
-    input wire areset,
-    input wire load,
-    output reg [31:0] pc
+    input wire [31:0] nextPc, // Next program counter value
+    input wire clk,          // Clock signal
+    input wire areset,      // Asynchronous reset signal
+    input wire load,       // Load signal to update the PC
+    output reg [31:0] pc  // Current program counter value
 );
 
 always @(posedge clk or areset) begin

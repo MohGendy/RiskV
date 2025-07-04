@@ -1,9 +1,9 @@
 module dataMem (
-    input wire clk,
-    input wire WE,
-    input wire [31:0] A,
-    input wire [31:0] WD,
-    output reg [31:0] RD
+    input wire clk,          // Clock signal
+    input wire WE,          // Write Enable signal
+    input wire [31:0] A,   // Address input
+    input wire [31:0] WD, // Data input
+    output reg [31:0] RD // Data output
 );
     reg [31:0]mem[0:63]; // Memory array with 64 words
 
@@ -12,7 +12,7 @@ module dataMem (
     end
 
     always @(posedge clk) begin
-        mem[A[31:2]] <= WD; // Write data to memory on clock edge
+        if (WE) mem[A[31:2]] <= WD; // Write data to memory on clock edge
     end
 
     

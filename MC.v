@@ -1,36 +1,36 @@
 module MC (
-    input wire clk,
-    input wire areset
+    input wire clk,         // Clock signal
+    input wire areset       // Asynchronous reset signal
 );
 
-    wire [31:0] PC;
-    wire load;
+    wire [31:0] PC;         // Program Counter
+    wire load;              // Load signal for the PC
 
-    wire [31:0] Instr;
+    wire [31:0] Instr;      // Instruction fetched from memory
 
-    wire PCSrc;
-    wire ResultSrc;
-    wire MemWrite;
-    wire [2:0] ALUControl;
-    wire ALUSrc;
-    wire [1:0] ImmSrc;
-    wire RegWrite;
+    wire PCSrc;             // PC Source Select
+    wire ResultSrc;         // Result Source Select
+    wire MemWrite;          // Memory Write Enable
+    wire [2:0] ALUControl;  // ALU Control signals
+    wire ALUSrc;            // ALU Source Select
+    wire [1:0] ImmSrc;      // Immediate Source Select
+    wire RegWrite;          // Register Write Enable
 
-    wire [31:0] ImmExt;
+    wire [31:0] ImmExt;     // Extended Immediate Value
 
-    wire [31:0] RD1;
-    wire [31:0] RD2;
-    wire [31:0] ALUIn2;
-    wire [31:0] ALUResult;
-    wire Zero;
-    wire Sign;
+    wire [31:0] RD1;        // Register 1
+    wire [31:0] RD2;        // Register 2
+    wire [31:0] ALUIn2;     // Second ALU operand, either from register or immediate
+    wire [31:0] ALUResult;  // ALU Result
+    wire Zero;              // Zero flag
+    wire Sign;              // Sign flag
 
-    wire [31:0] ReadData;
-    wire [31:0] Result;
+    wire [31:0] ReadData;   // Data read from memory
+    wire [31:0] Result;     // Final result to be written back to the register file
 
-    wire [31:0] PCTarget;
-    wire [31:0] PCplus4;
-    wire [31:0] PCNext;
+    wire [31:0] PCTarget;   // Target PC for branch instruction
+    wire [31:0] PCplus4;    // PC plus 4 for instruction fetch
+    wire [31:0] PCNext;     // Next PC value to be loaded
 
     pc pcReg (
         .nextPc(PCNext),
@@ -117,7 +117,7 @@ module MC (
 
     adder branchAdder (
         .A(PC),
-        .B(ImmExt), // Shift immediate left by 2 for word addressing
+        .B(ImmExt),
         .SUM(PCTarget)
     );
 

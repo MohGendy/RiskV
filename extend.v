@@ -1,7 +1,7 @@
 module extend (
-    input wire [31:0] Instr,
-    input wire [1:0] ImmSrc,
-    output reg [31:0] ImmExt
+    input wire [31:0] Instr,   // Instruction input
+    input wire [1:0] ImmSrc,  // Immediate source select
+    output reg [31:0] ImmExt // Extended immediate output
 );
     always @(*) begin
         ImmExt = 32'b0;

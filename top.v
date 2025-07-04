@@ -1,6 +1,4 @@
-module top (
-    
-);
+module top;
     reg clk;
     reg rst;
     integer i;
@@ -10,7 +8,8 @@ module top (
         .areset(rst)
     );
 
-    initial begin
+    initial begin // Initialize the clock and reset signals and memory
+        $display("Starting simulation...");
         $readmemh("program.txt", mc.instrMem.mem);
         for (i = 0;i < 32 ; i = i+1 ) begin
             mc.registerFile.file[i] = 32'b0; // Initialize register file to zero

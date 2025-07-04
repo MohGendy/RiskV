@@ -8,18 +8,20 @@ module alu (
 );
 
 always @(*) begin
-    // zero = 1'b0;
-    // sign = 1'b0;
-    // aluResult = 32'b0;
+    // Initialize outputs
+    zero = 1'b0;
+    sign = 1'b0;
+    aluResult = 32'b0;
+
     case(aluControl)
-        3'b000: aluResult = srcA + srcB; // ADD
-        3'b001: aluResult = srcA << srcB; // SHL
-        3'b010: aluResult = srcA - srcB; // SUB
-        3'b100: aluResult = srcA ^ srcB; // XOR
-        3'b101: aluResult = srcA >> srcB; // SHR
-        3'b110: aluResult = srcA | srcB; // OR
-        3'b111: aluResult = srcA & srcB; // AND
-        default: aluResult = 32'b0; // Default case
+        3'b000: aluResult = srcA + srcB;           // ADD
+        3'b001: aluResult = srcA << srcB;         // SHL
+        3'b010: aluResult = srcA - srcB;         // SUB
+        3'b100: aluResult = srcA ^ srcB;        // XOR
+        3'b101: aluResult = srcA >> srcB;      // SHR
+        3'b110: aluResult = srcA | srcB;      // OR
+        3'b111: aluResult = srcA & srcB;     // AND
+        default: aluResult = 32'b0;         // Default case
     endcase
 
     // Set zero flag

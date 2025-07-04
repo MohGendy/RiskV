@@ -5,5 +5,4 @@ module adder (
 
 );
     assign SUM = A + B;
-
 endmodule
